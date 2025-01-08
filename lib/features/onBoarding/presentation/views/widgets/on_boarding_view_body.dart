@@ -1,5 +1,7 @@
 import 'package:bookstore_/core/utils/assets.dart';
 import 'package:bookstore_/core/utils/constants.dart';
+import 'package:bookstore_/features/home/presentation/views/home_view.dart';
+import 'package:bookstore_/features/onBoarding/presentation/views/widgets/on_boarding_books_grid.dart';
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 
@@ -32,26 +34,28 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             // todo
             controller: _pageController,
             onPageChanged: _onPageChanged,
-            children: const [
-              PageViewItem(
+            children: [
+              const PageViewItem(
                 img: Assets.imagesImg1,
                 title: 'Only Books Can Help You ',
                 description:
                     'Books can help you to increase your knowledge and become more successfully.',
               ),
-              PageViewItem(
+              const PageViewItem(
                 img: Assets.imagesImg2,
                 title: 'Learn Smartly',
                 description:
                     'It’s 2022 and it’s time to learn every quickly and smartly. All books are storage in cloud and you can access all of them from your laptop or PC. ',
               ),
+              // todo
+              OnBoardingBooks()
             ],
           ),
         ),
 
         // todo
         DotsIndicator(
-          dotsCount: 2,
+          dotsCount: 3,
           position: _currentPage,
           decorator: DotsDecorator(
             size: const Size(10.0, 8.0),
