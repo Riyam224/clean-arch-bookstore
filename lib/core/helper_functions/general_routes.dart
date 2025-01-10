@@ -1,4 +1,5 @@
 import 'package:bookstore_/core/splash_view.dart';
+import 'package:bookstore_/features/details/presentation/views/details_view.dart';
 import 'package:bookstore_/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,10 @@ Route onGenerateRoute(RouteSettings settings) {
     case HomeView.routeName:
       return MaterialPageRoute(
         builder: (_) => const HomeView(),
+      );
+    case DetailsView.routeName:
+      return MaterialPageRoute(
+        builder: (_) => const DetailsView(),
       );
     //* default route
     default:

@@ -32,9 +32,14 @@ class PageViewItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Icon(
-                    FontAwesomeIcons.arrowLeftLong,
-                    size: 20,
+                  IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                   ),
                   // todo move to home screen
                   GestureDetector(

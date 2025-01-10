@@ -1,10 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:bookstore_/core/utils/constants.dart';
+import 'package:bookstore_/features/home/presentation/views/widgets/popular_books_list.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/assets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'widgets/recommended_books_list.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -31,36 +34,42 @@ class HomeViewBody extends StatelessWidget {
         left: 20,
         right: 20,
       ),
-      child: Column(
-        children: [
-          const SizedBox(
-            height: 100,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Icon(
-                  FontAwesomeIcons.arrowLeft,
-                  size: 20,
-                ),
-                Text(
-                  'Book of the week',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: whiteColor,
-                    fontSize: 20,
-                    fontFamily: 'HK Grotesk',
-                    fontWeight: FontWeight.w700,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 100,
+              width: double.infinity,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                    ),
+                    onPressed: null,
                   ),
-                ),
-                Icon(
-                  Icons.menu,
-                  size: 30,
-                ),
-              ],
+                  Text(
+                    'Book of the week',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: whiteColor,
+                      fontSize: 20,
+                      fontFamily: 'HK Grotesk',
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Icon(
+                    Icons.menu,
+                    size: 30,
+                  ),
+                ],
+              ),
             ),
-          ),
-          Container(
+            Container(
               width: double.infinity,
               height: 200,
               // color: pinkColor,
@@ -189,8 +198,37 @@ class HomeViewBody extends StatelessWidget {
                         ))
                   ],
                 ),
-              ))
-        ],
+              ),
+            ),
+            // todo recomended books
+            Text(
+              'Recommanded for you',
+              style: TextStyle(
+                color: whiteColor,
+                fontSize: 20,
+                fontFamily: 'HK Grotesk',
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            // todo recomended books
+            RecommendedBooks(),
+            // todo popular books
+            Text(
+              'Popular books',
+              style: TextStyle(
+                color: whiteColor,
+                fontSize: 20,
+                fontFamily: 'HK Grotesk',
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            // todo popula books grid list view  in verical direction
+            PopularBooksListView(),
+          ],
+        ),
       ),
     );
   }

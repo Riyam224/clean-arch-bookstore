@@ -46,6 +46,26 @@ class Assets {
   /// assets/images/img2.png
   static const String imagesImg2 = "assets/images/img2.png";
 
+  /// Assets for imagesRecommend1
+  /// assets/images/recommend1.png
+  static const String imagesRecommend1 = "assets/images/recommend1.png";
+
+  /// Assets for imagesRecommend2
+  /// assets/images/recommend2.png
+  static const String imagesRecommend2 = "assets/images/recommend2.png";
+
+  /// Assets for imagesRecommend3
+  /// assets/images/recommend3.png
+  static const String imagesRecommend3 = "assets/images/recommend3.png";
+
+  /// Assets for imagesRectangle 5
+  /// assets/images/Rectangle 5.png
+  static const String imagesRectangle 5 = "assets/images/Rectangle 5.png";
+
+  /// Assets for imagesSigning
+  /// assets/images/signing.jpg
+  static const String imagesSigning = "assets/images/signing.jpg";
+
   /// Assets for imagesSplash
   /// assets/images/splash.png
   static const String imagesSplash = "assets/images/splash.png";
