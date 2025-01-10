@@ -59,7 +59,7 @@ class PageViewItem extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: 300,
+              height: 360,
               child: Image.asset(img),
             ),
             const SizedBox(

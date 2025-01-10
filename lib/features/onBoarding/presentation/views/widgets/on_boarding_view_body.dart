@@ -55,10 +55,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           ),
         ),
 
-        const SizedBox(
-          height: 20,
-        ),
-
         // todo
         // DotsIndicator(
         //   dotsCount: 3,
@@ -88,7 +84,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         ),
 
         const SizedBox(
-          height: 78,
+          height: 40,
         ),
       ],
     );
