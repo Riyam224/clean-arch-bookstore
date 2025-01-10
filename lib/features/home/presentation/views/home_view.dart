@@ -1,8 +1,9 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
+
 import 'package:bookstore_/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/assets.dart';
-import '../../../onBoarding/presentation/views/widgets/on_boarding_books_grid.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeView extends StatelessWidget {
@@ -27,7 +28,6 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        top: 20,
         left: 20,
         right: 20,
       ),
@@ -41,14 +41,14 @@ class HomeViewBody extends StatelessWidget {
               children: [
                 Icon(
                   FontAwesomeIcons.arrowLeft,
-                  size: 30,
+                  size: 20,
                 ),
                 Text(
                   'Book of the week',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: whiteColor,
-                    fontSize: 25,
+                    fontSize: 20,
                     fontFamily: 'HK Grotesk',
                     fontWeight: FontWeight.w700,
                   ),
@@ -60,121 +60,136 @@ class HomeViewBody extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          SizedBox(
-            width: 388,
-            height: 183,
-            // color: pinkColor,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                vertical: 36,
-                horizontal: 24,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 80,
-                    height: 178.68,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(Assets.imagesBook6),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 226,
-                    height: 112,
-                    color: whiteColor,
-                    child: Column(
-                      children: [
-                        const Text(
-                          'The Psychology of Money',
-                          style: TextStyle(
-                            color: Color(0xFF4D506C),
-                            fontSize: 14,
-                            fontFamily: 'HK Grotesk',
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const SizedBox(
-                          width: 226,
-                          height: 46,
-                          child: Text(
-                            'The psychology of money is the study of our behavior with money. Success with money isnt about knowledge, IQ or how good you are at math. Its about behavior, and everyone is prone to certain behaviors over others.',
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 85, 21, 21),
-                              fontSize: 7,
-                              fontFamily: 'HK Grotesk',
-                              fontWeight: FontWeight.w400,
-                              height: 1.50,
+          Container(
+              width: double.infinity,
+              height: 200,
+              // color: pinkColor,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                        width: MediaQuery.of(context).size.width * 0.25,
+                        height: 150,
+                        child: Image.asset(
+                          Assets.imagesBook6,
+                          fit: BoxFit.fill,
+                        )),
+                    Container(
+                        width: MediaQuery.of(context).size.width * 0.55,
+                        height: 150,
+                        color: whiteColor,
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 10,
                             ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 7,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                  width: 87,
-                                  height: 26,
-                                  decoration: BoxDecoration(
-                                    color: pinkColor,
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  child: const Center(
-                                    child: Text(
-                                      'Grab Now',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 10,
-                                        fontFamily: 'HK Grotesk',
-                                        fontWeight: FontWeight.w700,
+                            Text(
+                              'The Rich Dad Poor Dad',
+                              style: TextStyle(
+                                color: blackColor,
+                                fontSize: 12,
+                                fontFamily: 'HK Grotesk',
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Container(
+                              height: 46,
+                              // color: pinkColor,
+                              child: Text(
+                                'The psychology of money is the study of our behavior with money. Success with money isnt about knowledge, IQ or how good you are at math.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: blackColor,
+                                  fontSize: 8,
+                                  fontFamily: 'HK Grotesk',
+                                  fontWeight: FontWeight.w400,
+                                  // height: 1.50,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            // todo
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 15),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    width: 87,
+                                    height: 26,
+                                    decoration: ShapeDecoration(
+                                      color: Color(0xFFDE7773),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5)),
+                                      shadows: [
+                                        BoxShadow(
+                                          color: Color(0x3F000000),
+                                          blurRadius: 45,
+                                          offset: Offset(0, 4),
+                                          spreadRadius: 0,
+                                        )
+                                      ],
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        'Grab Now',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 10,
+                                          fontFamily: 'HK Grotesk',
+                                          fontWeight: FontWeight.w700,
+                                        ),
                                       ),
                                     ),
-                                  )),
-                              const SizedBox(
-                                width: 20,
-                                height: 26,
-                              ),
-                              Container(
-                                  width: 87,
-                                  height: 26,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
                                   ),
-                                  child: const Center(
-                                      child: Text(
-                                    'Learn More',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Color(0xFF4D506C),
-                                      fontSize: 10,
-                                      fontFamily: 'HK Grotesk',
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ))),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          )
+                                  Container(
+                                      width: 70,
+                                      height: 26,
+                                      decoration: ShapeDecoration(
+                                        // color: blackColor,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(5)),
+                                        shadows: [
+                                          BoxShadow(
+                                            color: Color(0x3F000000),
+                                            blurRadius: 45,
+                                            offset: Offset(0, 4),
+                                            spreadRadius: 0,
+                                          )
+                                        ],
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'Learn More',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xFF4D506C),
+                                            fontSize: 10,
+                                            fontFamily: 'HK Grotesk',
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      )),
+                                ],
+                              ),
+                            )
+                          ],
+                        ))
+                  ],
+                ),
+              ))
         ],
       ),
     );

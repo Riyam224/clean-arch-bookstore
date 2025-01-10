@@ -1,5 +1,3 @@
-import 'package:bookstore_/core/splash_view.dart';
-import 'package:bookstore_/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'core/helper_functions/general_routes.dart';

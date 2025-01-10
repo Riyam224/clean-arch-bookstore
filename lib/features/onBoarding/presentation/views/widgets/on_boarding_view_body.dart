@@ -1,6 +1,5 @@
 import 'package:bookstore_/core/utils/assets.dart';
 import 'package:bookstore_/core/utils/constants.dart';
-import 'package:bookstore_/features/home/presentation/views/home_view.dart';
 import 'package:bookstore_/features/onBoarding/presentation/views/widgets/on_boarding_books_grid.dart';
 import 'package:flutter/material.dart';
 // import 'package:dots_indicator/dots_indicator.dart';
