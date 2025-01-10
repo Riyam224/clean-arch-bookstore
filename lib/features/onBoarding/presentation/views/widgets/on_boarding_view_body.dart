@@ -34,28 +34,34 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             // todo
             controller: _pageController,
             onPageChanged: _onPageChanged,
-            children: [
-              const PageViewItem(
+            children: const [
+              // todo first page
+              PageViewItem(
                 img: Assets.imagesImg1,
                 title: 'Only Books Can Help You ',
                 description:
                     'Books can help you to increase your knowledge and become more successfully.',
               ),
-              const PageViewItem(
-                img: Assets.imagesImg2,
-                title: 'Learn Smartly',
-                description:
-                    'It’s 2022 and it’s time to learn every quickly and smartly. All books are storage in cloud and you can access all of them from your laptop or PC. ',
-              ),
-              // todo
-              OnBoardingBooks()
+              // // todo second page
+              // const PageViewItem(
+              //   img: Assets.imagesImg2,
+              //   title: 'Learn Smartly',
+              //   description:
+              //       'It’s 2022 and it’s time to learn every quickly and smartly. All books are storage in cloud and you can access all of them from your laptop or PC. ',
+              // ),
+              // // todo third page
+              // OnBoardingBooks()
             ],
           ),
         ),
 
+        const SizedBox(
+          height: 20,
+        ),
+
         // todo
         DotsIndicator(
-          dotsCount: 3,
+          dotsCount: 1,
           position: _currentPage,
           decorator: DotsDecorator(
             size: const Size(10.0, 8.0),

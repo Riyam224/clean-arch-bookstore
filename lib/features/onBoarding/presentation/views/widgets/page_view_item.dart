@@ -1,4 +1,4 @@
-// ignore_for_file: sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace, avoid_unnecessary_containers
 
 import 'package:bookstore_/core/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -21,10 +21,11 @@ class PageViewItem extends StatelessWidget {
       padding: const EdgeInsets.all(20.0),
       child: Container(
         width: double.infinity,
+        height: double.infinity,
         child: Column(
           children: [
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             Container(
               width: double.infinity,
@@ -32,8 +33,8 @@ class PageViewItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Icon(
-                    FontAwesomeIcons.arrowLeft,
-                    size: 30,
+                    FontAwesomeIcons.arrowLeftLong,
+                    size: 20,
                   ),
                   // todo move to home screen
                   GestureDetector(
@@ -46,7 +47,6 @@ class PageViewItem extends StatelessWidget {
                         color: whiteColor,
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
-                        letterSpacing: 1,
                         height: 2.25,
                       ),
                     ),
@@ -55,39 +55,37 @@ class PageViewItem extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 42.97,
+              height: 50.0,
             ),
             Container(
               width: double.infinity,
-              height: size.height * 0.5,
+              height: 300,
               child: Image.asset(img),
             ),
             const SizedBox(
-              height: 106,
+              height: 50,
             ),
             Text(
               title,
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: whiteColor,
-                fontSize: 24,
-                fontFamily: 'HK Grotesk',
+                fontSize: 25,
                 fontWeight: FontWeight.w700,
-                height: 1.50,
+                // height: 1.50,
               ),
             ),
             const SizedBox(
-              height: 14,
+              height: 30,
             ),
-            SizedBox(
-              width: 328,
+            Container(
+              width: size.width * 0.8,
               child: Text(
                 description,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   color: whiteColor,
-                  fontSize: 14,
-                  fontFamily: 'HK Grotesk',
+                  fontSize: 15,
                   fontWeight: FontWeight.w400,
                 ),
               ),
