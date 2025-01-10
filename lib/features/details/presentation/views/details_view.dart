@@ -188,8 +188,89 @@ class DetailsView extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 30),
+
+                Container(
+                  width: 328,
+                  height: 80,
+                  decoration: ShapeDecoration(
+                    color: greyColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    shadows: [
+                      BoxShadow(
+                        color: Color(0x3F000000),
+                        blurRadius: 35,
+                        offset: Offset(0, 0),
+                        spreadRadius: 0,
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ClipOval(
+                        child: Image.asset(
+                          Assets.imagesAuthor, // Replace with your image URL
+                          width: 50, // Adjust size as needed
+                          height: 50, // Adjust size as needed
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Author',
+                            style: TextStyle(
+                              color: Color(0xFF9091A0),
+                              fontSize: 10,
+                              fontFamily: 'HK Grotesk',
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          Text(
+                            'Morgan Housel',
+                            style: TextStyle(
+                              color: Color(0xFF4D506C),
+                              fontSize: 14,
+                              fontFamily: 'HK Grotesk',
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          Text(
+                            'Best Seller of New York Times',
+                            style: TextStyle(
+                              color: Color(0xFF9091A0),
+                              fontSize: 8,
+                              fontFamily: 'HK Grotesk',
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        width: 17,
+                        height: 17,
+                        decoration: ShapeDecoration(
+                          color: Color(0xFFC4C4C4),
+                          shape: StarBorder(
+                            points: 5,
+                            innerRadiusRatio: 0.38,
+                            pointRounding: 1,
+                            valleyRounding: 0,
+                            rotation: 0,
+                            squash: 0,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+
                 // todo after the floating
-                const SizedBox(height: 95),
+                const SizedBox(height: 30),
                 Container(
                     width: double.infinity,
                     // color: Colors.red,
@@ -238,8 +319,14 @@ class DetailsView extends StatelessWidget {
                             width: double.infinity,
                             height: 184,
                             color: pinkColor,
+                            child: Image.asset(
+                              Assets.imagesSigning,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                          SizedBox(height: 100),
+                          SizedBox(
+                            height: 20,
+                          ),
                         ],
                       ),
                     )),

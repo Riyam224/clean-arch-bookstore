@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesAuthor
+  /// assets/images/author.jpg
+  static const String imagesAuthor = "assets/images/author.jpg";
+
   /// Assets for imagesBook1
   /// assets/images/book1.png
   static const String imagesBook1 = "assets/images/book1.png";
@@ -58,9 +62,9 @@ class Assets {
   /// assets/images/recommend3.png
   static const String imagesRecommend3 = "assets/images/recommend3.png";
 
-  /// Assets for imagesRectangle 5
-  /// assets/images/Rectangle 5.png
-  static const String imagesRectangle 5 = "assets/images/Rectangle 5.png";
+  /// Assets for imagesRectangle5
+  /// assets/images/Rectangle5.png
+  static const String imagesRectangle5 = "assets/images/Rectangle5.png";
 
   /// Assets for imagesSigning
   /// assets/images/signing.jpg
