@@ -24,6 +24,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
+    // todo splash view 
     return SizedBox(
       width: double.infinity,
       height: double.infinity,
