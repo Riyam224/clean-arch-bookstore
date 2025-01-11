@@ -12,6 +12,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
+
+    //  todo navigate to onboarding view
     Future.delayed(
       const Duration(seconds: 2),
       () {

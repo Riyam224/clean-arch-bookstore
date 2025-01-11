@@ -57,51 +57,99 @@ class HomeViewBody extends StatelessWidget {
               ),
             ),
           ),
-          SliverList(
-            delegate: SliverChildListDelegate(
-              [
-                const SizedBox(
-                  height: 30,
-                ),
-                // todo recomended books
-                Text(
-                  'Recommanded for you',
-                  style: TextStyle(
-                    color: whiteColor,
-                    fontSize: 20,
-                    fontFamily: 'HK Grotesk',
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                // todo recommended books
-                RecommendedBooks(),
-                // todo popular books
-                Text(
-                  'Popular books',
-                  style: TextStyle(
-                    color: whiteColor,
-                    fontSize: 20,
-                    fontFamily: 'HK Grotesk',
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-              ],
-            ),
-          ),
+          // SliverList(
+          //   delegate: SliverChildListDelegate(
+          //     [
+          //       const SizedBox(
+          //         height: 30,
+          //       ),
+          //       // todo recomended books
+          //       Text(
+          //         'Recommanded for you',
+          //         style: TextStyle(
+          //           color: whiteColor,
+          //           fontSize: 20,
+          //           fontFamily: 'HK Grotesk',
+          //           fontWeight: FontWeight.w700,
+          //         ),
+          //       ),
+          //       const SizedBox(
+          //         height: 20,
+          //       ),
+          //       // todo recommended books
+          //       RecommendedBooks(),
+          //       // todo popular books
+          //       Text(
+          //         'Popular books',
+          //         style: TextStyle(
+          //           color: whiteColor,
+          //           fontSize: 20,
+          //           fontFamily: 'HK Grotesk',
+          //           fontWeight: FontWeight.w700,
+          //         ),
+          //       ),
+          //       SizedBox(
+          //         height: 30,
+          //       ),
+          //     ],
+          //   ),
+          // ),
           // SliverToBoxAdapter(
           //   child: // todo popular books list view
           //       PopularBooksListView(),
           // ),
-          SliverFillRemaining(
-            hasScrollBody: true,
-            child: PopularBooksListView(),
-          )
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 30,
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: // todo recomended books
+                Text(
+              'Recommanded for you',
+              style: TextStyle(
+                color: whiteColor,
+                fontSize: 20,
+                fontFamily: 'HK Grotesk',
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 20,
+            ),
+          ),
+          // todo recommended books
+          SliverToBoxAdapter(
+            child: RecommendedBooks(),
+          ),
+          SliverToBoxAdapter(
+            child: // todo popular books
+                Text(
+              'Popular books',
+              style: TextStyle(
+                color: whiteColor,
+                fontSize: 20,
+                fontFamily: 'HK Grotesk',
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+              child: SizedBox(
+            height: 30,
+          )),
+
+          SliverToBoxAdapter(
+            child: // todo popula books grid list view  in verical direction
+                PopularBooksListView(),
+          ),
+
+          // SliverFillRemaining(
+          //   hasScrollBody: true,
+          //   child: PopularBooksListView(),
+          // )
         ],
       ),
     );
