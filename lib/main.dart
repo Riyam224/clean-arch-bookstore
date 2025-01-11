@@ -1,3 +1,4 @@
+import 'package:bookstore_/core/splash_view.dart';
 import 'package:bookstore_/features/details/presentation/views/details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,7 +27,7 @@ class BookStoreApp extends StatelessWidget {
       // todo
 
       onGenerateRoute: onGenerateRoute,
-      initialRoute: DetailsView.routeName,
+      initialRoute: SplashView.routeName,
     );
   }
 }

@@ -90,7 +90,7 @@ class OnBoardingBooks extends StatelessWidget {
               height: 19,
             ),
             const Text(
-              'Book Has Power To Chnage\nEverything',
+              'Book Has Power To Change\nEverything',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: pinkColor,

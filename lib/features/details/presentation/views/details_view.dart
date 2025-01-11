@@ -166,6 +166,38 @@ class DetailsView extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
+                                            const SizedBox(width: 2),
+                                            Container(
+                                              width: 17,
+                                              height: 17,
+                                              decoration: const ShapeDecoration(
+                                                color: Color(0xFFE7B53F),
+                                                shape: StarBorder(
+                                                  points: 5,
+                                                  innerRadiusRatio: 0.38,
+                                                  pointRounding: 1,
+                                                  valleyRounding: 0,
+                                                  rotation: 0,
+                                                  squash: 0,
+                                                ),
+                                              ),
+                                            ),
+                                            const SizedBox(width: 2),
+                                            Container(
+                                              width: 17,
+                                              height: 17,
+                                              decoration: const ShapeDecoration(
+                                                color: Color(0xFFE7B53F),
+                                                shape: StarBorder(
+                                                  points: 5,
+                                                  innerRadiusRatio: 0.38,
+                                                  pointRounding: 1,
+                                                  valleyRounding: 0,
+                                                  rotation: 0,
+                                                  squash: 0,
+                                                ),
+                                              ),
+                                            ),
                                             const SizedBox(width: 5),
                                             const Text(
                                               '(5.0)',
